@@ -232,6 +232,138 @@ VE &&
 
 
 
+3-DEĞİL 
+*Sonucu tersine çevirir 
+Örnek kod:void main () {
+  bool aktif = true ;
+  print(!aktif) ;
+  
+} 
+(sonucu printte true girmemize rağmen false döndürdü) 
+
+
+
+
+void main() {
+  int yas  =  16 ; 
+  bool ehliyet = false;
+  print(yas >= 18 && ehliyet ) ;
+  print(yas < 18 || ehliyet) ;
+  
+}
+(mantıksal iifadelerin sonucu her zaman true/false , &&'da ikiside true olmalı , || biri true yeterli , !'da sonucu tersine çevirir.) 
+
+***Operatörlerle ilgili son önemli not:null = değildir "" 
+"":var ama içi boş demektir
+null:hiç yok demektir
+
+
+
+
+void main () {
+    int a = 2 ;
+    a++ ;
+    print(a);
+    
+}
+(a++ ifadesi değişkenin değerini 1 arttırır)
+
+
+
+
+void main () {
+    int a = 4;
+    int b = a += 2 ;
+    print(a);
+    print(b);
+    
+} 
+(a += 2 , a'nın değerini 2 arttırır ve oluşan yeni değeri hem a'ya hem b'ye atar)
+
+
+
+
+void main () {
+    int a = 5 ; 
+    int b = a++ ;
+    a += 1 ;
+    print(a);
+    print(b);
+}
+(a++ önce eski değeri b'ye verir sonra a'yı arttırır, ardından a +=1 ile a bir kez daha arttırılır) 
+
+
+
+
+void main () {
+    int x = 3 ;
+    x++;
+    x++;
+    x += 2 ;
+    print(x);
+    
+}
+(birden fazla arttırma işlemi arka arkaya yazıldığında her biri sırasıyla çalışır ve değer kademeli olarak artar)
+
+
+
+
+
+void main () {
+    int x = 6 ;
+    int y = ++x ;
+    y += x;
+    print(x);
+    print(y);
+    
+}
+(++x önce x'i arttırıp sonucu y'ye veriri, y +=x ile y,x'in güncel değeri kadar arttırılr)
+
+*Pratik Notlar 
+x++; önce kullan, sonra arttır 
+++x; önce arttır, sonra kullan 
++=;  kendi değerini al, ekle, geri yaz 
+
+
+
+
+ import 'dart:io';
+ void main () {
+    print("adınızı giriniz");
+    String? isim = stdin.readLineSync();
+    print("girilen isim $isim");
+    print("yaşınızı giriniz");
+    int? yas = int.parse(stdin.readLineSync()!);
+    yas = yas + 5 ;
+    print("girilen yas $yas");
+
+    
+    }
+(import 'dart:io';) kullanıcıdan girdi almak için şart 
+! işareti kullanıcı birşey yazmazsa bile "null olamaz" demek
+string? null olmak itimali olan yazılar için)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
