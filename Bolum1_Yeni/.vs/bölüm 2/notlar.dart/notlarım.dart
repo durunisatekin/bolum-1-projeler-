@@ -343,6 +343,11 @@ Not:Bir programda bir fonksiyon daire alanını hesaplar, diğer fonksiyon ise �
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 075f1fc (ilk yukleme)
 DART-LİSTELER(ARRAY)
 1-Sabit uzunluklu Liste(Fixed Length List /Array): Uzunluğu sonradan değiştirilmeyen listedir.Eleman sayısı sabittir.
 Örnek: List<int> sayilar = List.filled(5,0);
@@ -387,6 +392,190 @@ Sabit uzunluklu listelerin boyutu sonradan değiştirilemez.Dinamik listelere el
 
 
 
+<<<<<<< HEAD
+=======
+1.DART'TA SET 
+Set= aynı elemandan 1 tane tutar, tekrarları siler.
+Tanımlama: 
+Set<int> sayilar = {1,2,3,4};
+
+Duplicate örneği:
+void main() {
+Set<int> sayilar = {1,2,2,3,3,4};
+print(sayilar);
+}
+
+Çıktı: {1,2,3,4} 
+
+Set'e eleman ekleme:
+sayilar.add(5);
+
+Set'te index yok:
+sayilar[0]; //HATA 
+
+2.DART'TA MAP 
+Tanım:
+Map= key-value şeklinde çalışır.
+
+Tanımlama:
+Map<String, int> notlar= {
+"Ahmet" :70,
+"Mehmet":85,
+"Duru" :95, 
+};
+
+Erişim:
+print(notlar["Duru"]); // 95
+
+Aynı key olursa: 
+void main () {
+Map<String, int>notlar = {
+"Ali": 50,
+"Ali": 90
+};
+print(notlar);
+}
+
+Çıktı:
+{Ali: 90} 
+Not:Eskisi silinir yenisi yazılır.
+
+Map'e eleman ekleme: 
+notlar["Ayşe"] = 88;
+
+
+
+
+
+NESNE YÖNELİMLİ PROGRAMLAMA(OOP)-GİRİŞ
+1.Sınıf(Class) Nedir? 
+Sınıf=nessnenin taslağıdır.
+Plan,şablon,kalıp gibidir.
+
+Örnek:
+class Araba{
+ String renk= "" ;
+ int hiz = 0 ;
+}
+
+2.Nesne(Object) Nedir? 
+Nesne=sınıftan üretilen gerçek varlıktır 
+Örnek: 
+Araba a1 = Araba();
+
+3.İlk Sınıf Örneği 
+
+class Ogrenci{
+ String ad = "" ;
+ int yas = 0 ;
+}
+
+
+Ogrenci o1 = Ogrenci() ;
+o1.ad= "duru" ;
+o1.yas= 20 ;
+
+4.Constructor(Kurucu Metot) 
+Nesne oluşturulurken otomatik çalışan metottur.
+Sınıf adı ile aynı olur.
+
+Örnek:
+class Ogrenci {
+Ogrenci() {
+print("nesne oluşturuldu");
+  }
+}
+
+
+5.Constructor Çeşitleri 
+*Parametresiz 
+Ogrenci() {}
+
+*Parametreli 
+Ogrenci(String ad , int yas) {
+   this.ad = ad;
+   this.yas = yas;
+}
+
+6.this Anahtar Kelimesi 
+this-> sınıfın kendi değişkenini gösterir.
+***this.ad= add;
+
+7.İsimlendirilmiş Constructor
+Ogrenci.yasli(this.ad) {
+  yas = 50 ;
+}
+Ogrenci o1 = Ogrenci.yasli("Ai");
+
+
+8.Factory Contructor
+Nesne üretimini kontrol etmek için kullanılır.
+
+Örnek:
+class Ogrenci {
+  factory Ogrenci() {
+    return Ogrenci._();
+    }
+    
+   Ogrenci._();
+}
+
+9.Private Değişken ve Metot 
+Başına _ konur -> private olur
+Sadece sınıf içinde kullanılır 
+String_ad;
+
+10.Neden private kullanırız? 
+Veriyi korumak için 
+Dışardan direkt değiştirilmesini engellemek için 
+Kontrollü erişim sağlamak için 
+
+11.Getter-Setter 
+Getter
+String get ad => _ad;
+
+Setter
+set ad (String deger) {
+ _ad = deger;
+}
+
+
+12.Private + Getter Setter Örneği 
+class Kisi {
+  String _isim = "";
+  
+  String get isim => _isim; 
+  set isim(String deger )}
+Kullanım: 
+Kisi k = Kisi() 
+k.isim = "duru" ;
+print(k.isim);
+
+MİNİ EZBER 
+Class=taslak
+object= gerçek nesne 
+constructor= kurucu 
+this= sınıfın kendi değişkeni 
+_ = private 
+getter = okur 
+setter = değiştirir 
+factory = kontrollü nesne üretir
+
+_ varsa -> private 
+get varsa -> okuma 
+set varsa ->değiştirme 
+this varsa -> sınıf içi değişken 
+factory varsa -> özel nesne üretimi 
+
+
+
+
+
+
+
+
+
+>>>>>>> 075f1fc (ilk yukleme)
 
 
 

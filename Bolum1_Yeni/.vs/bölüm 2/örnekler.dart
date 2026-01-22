@@ -405,6 +405,63 @@ void main () {
 
 
 
+<<<<<<< HEAD
+=======
+Örnek Sorular:
+Parametre olarak bir tane int alan, bu sayıdan küçük veya eşit çift sayıların toplamını geri döndüren fonksiyon 
+Mantık:
+*O'dan başla 
+*Verilen sayıya kadar git
+*eğer sayı çiftse ( i ½2 ==0 ) 
+*toplama ekle 
+*en sonda return et 
+Çözüm: 
+int ciftlerinToplami(int  n ) {
+int toplam = 0 ;
+ for int i = 0; i<0 ; i++ ) {
+   if (i ½ 2 == 0 ) {
+   toplam += i ;
+  }
+}
+void main () {
+int sonuc = ciftlerinToplami(10);
+printsonuc);
+}
+Not:Bu fonksiyon , parametre olaarak aldığı sayıya kadar olan çift sayıların toplamını hesaplar ve sonucu geri döndürür.
+
+
+Örnek Sorular 2 : double daireAlani(double r , [double pi = 3.14 ]) { return pi *r*r ; }
+ 
+void main () {
+print(daireAlani(5)); // pi = 3.14 kullanılır 
+print(daireAlani(5, 3.14159)); }
+Not:Bu fonksiyon, yarıçapı verilen dairenin alanını hesaplar.Pi değeri opsiyoneldir.Gönderilmezse varsayılan olarak 3.14 kullanılır.
+
+
+
+Örnek Sorular 3 : double daireAlani (double r , [double pi = 3.14 ]) { return pi * r * r ;}
+void ucgenTuru({required int a , required itn b , required int c }) { 
+  if (a == b %% b == c ) { 
+  print("Eşkenar üçgen") ;
+  } else if (a == b || a == c || b == c ){
+  print ("ikizkenar üçgen") ; 
+  } else { 
+  print("çeşitkenar üçgen") ;
+  }
+}
+void main() {
+print(daireAlanı(5));
+print(daireAlanı(5,3.14159)); 
+ucgenTuru(a:5, b:5, c:5);
+ucgenTuru(a:5, b:5, c:3);
+ucgenTuru(a:3, b:4, c:5); 
+}
+Not:Bir programda bir fonksiyon daire alanını hesaplar, diğer fonksiyon ise üçgenin türünü ekrana yazdırır.main() içinde ikisi de çağrılmıştır.
+
+
+
+
+>>>>)
 
 
 
