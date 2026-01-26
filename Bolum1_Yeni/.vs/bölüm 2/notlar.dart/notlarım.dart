@@ -448,124 +448,121 @@ notlar["Ayşe"] = 88;
 
 
 NESNE YÖNELİMLİ PROGRAMLAMA(OOP)-GİRİŞ
-1.Sınıf(Class) Nedir? 
-Sınıf=nessnenin taslağıdır.
-Plan,şablon,kalıp gibidir.
+*sınıfın içinde tanımlanan fonskiyonlarada metot denir.
 
-Örnek:
-class Araba{
- String renk= "" ;
- int hiz = 0 ;
+*SINIF VE NESNE KAVRAMLARI İLK SINIF ÖRNEĞİ*
+main(List<String> args) {
+    int sayi = 5 ;
+    ogrenci cenker = ogrenci();
+    cenker.ogrAd = "cenker olağan";
+    cenker.ogrNo = "24";
+    cenker.aktifMi = true ;
+    ogrenci duru = ogrenci();
+    var tuana = ogrenci();
 }
 
-2.Nesne(Object) Nedir? 
-Nesne=sınıftan üretilen gerçek varlıktır 
-Örnek: 
-Araba a1 = Araba();
+class ogrenci {
+  //  instance variables 
+  int ogrNo = 1 ;
+  String ogrAd= "";
+  bool aktifMi= true ;
 
-3.İlk Sınıf Örneği 
+void dersCalıs() {
+   print("öğrenci ders çalışıyor");
 
-class Ogrenci{
- String ad = "" ;
- int yas = 0 ;
+}
+
 }
 
 
-Ogrenci o1 = Ogrenci() ;
-o1.ad= "duru" ;
-o1.yas= 20 ;
 
-4.Constructor(Kurucu Metot) 
-Nesne oluşturulurken otomatik çalışan metottur.
-Sınıf adı ile aynı olur.
+*KURUCU CONSTRUCTOR METHODLAR VE ÇEŞİTLERİ*
+Not:null değer olabilicekse eğer yanına soru işareti koyabiliriz.(string? int?) 
 
-Örnek:
-class Ogrenci {
-Ogrenci() {
-print("nesne oluşturuldu");
+void main(List<String> args) {
+  Araba honda = Araba(2025, "Honda", true);
+  honda.bilgileriSoyle();
+
+  honda.modelYili = 2026;
+  honda.bilgileriSoyle();
+
+  var reno = Araba.bos();
+  reno.bilgileriSoyle();
+
+  var bmw = Araba(2021, "BMW", true);
+  bmw.bilgileriSoyle();
+}
+
+class Araba {
+  int? modelYili;
+  String? marka;
+  bool? otomatikMi;
+
+  // Normal constructor
+  Araba(this.modelYili, this.marka, this.otomatikMi) {
+    print("Kurucu metot tetiklendi");
+  }
+
+  // Named constructor
+  Araba.bos() {
+    print("Boş araba oluşturuldu");
+  }
+
+  void bilgileriSoyle() {
+    print(
+      "Arabanın model yılı: $modelYili, "
+      "markası: $marka, "
+      "otomatik mi: $otomatikMi",
+    );
   }
 }
 
 
-5.Constructor Çeşitleri 
-*Parametresiz 
-Ogrenci() {}
+*THİS ANAHTAR KELİMESİ VE KULLANIM ARACI*
+! İşareti null olabilicek şeyleri null değilmiş gibi davranmasını sağlıyor.
 
-*Parametreli 
-Ogrenci(String ad , int yas) {
-   this.ad = ad;
-   this.yas = yas;
-}
+ 
 
-6.this Anahtar Kelimesi 
-this-> sınıfın kendi değişkenini gösterir.
-***this.ad= add;
+ class CemberDaire {
+  static const double pi = 3.14;
+  double yaricap;
 
-7.İsimlendirilmiş Constructor
-Ogrenci.yasli(this.ad) {
-  yas = 50 ;
-}
-Ogrenci o1 = Ogrenci.yasli("Ai");
+  CemberDaire(this.yaricap);
 
+  double alanHesapla() {
+     return 3.14*yaricap*yaricap;
+  }
+     double cevreHesapla() {
+      return 2*3.14*yaricap;
+     }
+  }
 
-8.Factory Contructor
-Nesne üretimini kontrol etmek için kullanılır.
+ void main() {
+  CemberDaire daire =CemberDaire(5);
 
-Örnek:
-class Ogrenci {
-  factory Ogrenci() {
-    return Ogrenci._();
-    }
-    
-   Ogrenci._();
-}
-
-9.Private Değişken ve Metot 
-Başına _ konur -> private olur
-Sadece sınıf içinde kullanılır 
-String_ad;
-
-10.Neden private kullanırız? 
-Veriyi korumak için 
-Dışardan direkt değiştirilmesini engellemek için 
-Kontrollü erişim sağlamak için 
-
-11.Getter-Setter 
-Getter
-String get ad => _ad;
-
-Setter
-set ad (String deger) {
- _ad = deger;
-}
+  print("alan: ${daire.alanHesapla()}");
+  print("çevre : ${daire.cevreHesapla()}");
+ } 
+ NOT:Metotlar birbirinin içine girmez 
+ return metodu bitirir 
+ constructor= class adı 
+ nesne üzerinden metot çağrılır 
 
 
-12.Private + Getter Setter Örneği 
-class Kisi {
-  String _isim = "";
-  
-  String get isim => _isim; 
-  set isim(String deger )}
-Kullanım: 
-Kisi k = Kisi() 
-k.isim = "duru" ;
-print(k.isim);
 
-MİNİ EZBER 
-Class=taslak
-object= gerçek nesne 
-constructor= kurucu 
-this= sınıfın kendi değişkeni 
-_ = private 
-getter = okur 
-setter = değiştirir 
-factory = kontrollü nesne üretir
 
-_ varsa -> private 
-get varsa -> okuma 
-set varsa ->değiştirme 
-this varsa -> sınıf içi değişken 
-factory varsa -> özel nesne üretimi 
+ABSTRACT SINIF (Soyut sınıf) 
+*nesnesi oluşturulmaz 
+*alt sınıflara şablon olur 
+*bunu mutlaka yazacaksın demek için kullanılır 
+
+Abstarct class örneği:
+abstarct class Sekil {
+ double alanHesapla() ;
+ double cevreHesapla();
+ }
+
+ 
 
 
 
@@ -575,7 +572,6 @@ factory varsa -> özel nesne üretimi
 
 
 
->>>>>>> 075f1fc (ilk yukleme)
 
 
 

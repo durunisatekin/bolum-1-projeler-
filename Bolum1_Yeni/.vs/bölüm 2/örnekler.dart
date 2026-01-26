@@ -460,9 +460,73 @@ Not:Bir programda bir fonksiyon daire alanını hesaplar, diğer fonksiyon ise �
 
 
 
+Örnek 1 : PRİVATE DEĞİŞKEN 
+class Kisi {
+  late String_ad;
+}
+Not:_-> private yapar 
 
->>>>)
 
+
+Örnek 2 : GETTER 
+class Kisi {
+  late String _ad;
+  
+  String get ad => _ad;
+}
+
+
+Örnek 3 : SETTER 
+class Kisi {
+  late String _ad;
+  
+  set ad (String deger){
+   _ad = deger;
+   }
+}
+Not:Setter private değeri değiştirir
+
+
+Örnek 4 : GETTER+SETTER BİRLİKTE 
+
+class Kisi {
+ late String _ad;
+ 
+ String get ad => _ad;
+ 
+ set ad(String deger){
+ _ad =deger;
+   }
+ }
+
+
+Örnek 6 : PRİVATE + CONSTRUCTOR + GETTER SETTER 
+class Ogrenci {
+  late String _isim;
+  late int _yas;
+
+  Ogrenci(this._isim, this._yas);
+
+  String get isim => _isim;
+  int get yas => _yas;
+
+  set yas(int yeniYas) {
+    _yas = yeniYas;
+  }
+}
+void main() {
+  Ogrenci o = Ogrenci("Duru", 20);
+  o.yas = 21;
+  print(o.isim);
+  print(o.yas);
+}
+
+
+_ → private
+get → okur
+set → değiştirir
+late → sonra atanacak
+ 
 
 
 
