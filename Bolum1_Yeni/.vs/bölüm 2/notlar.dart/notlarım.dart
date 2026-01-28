@@ -560,7 +560,8 @@ _ varsa -> private
 get varsa -> okuma 
 set varsa ->değiştirme 
 this varsa -> sınıf içi değişken 
-factory varsa -> özel nesne üretimi 
+factory varsa -> özel nesne üretimi
+ 
 
 
 

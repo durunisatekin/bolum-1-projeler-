@@ -459,6 +459,47 @@ Not:Bir programda bir fonksiyon daire alanını hesaplar, diğer fonksiyon ise �
 
 
 
+class Ogrenci {
+     String ad ; //instance variable 
+     int yas ;  // instance variable 
+
+     Ogrenci(String ad , int yas ) {
+        this.ad =  ad;
+        this.yas = yas;
+     }
+}
+(ad ve yas instance variable'dır
+Her ogrenci nesnesinin kendi ad ve yaşı vardır 
+this.ad-> bu nesneye ait ad 
+Parametre isimleriyle çakışma olduğu için this zorunludur.) 
+)
+
+
+class Ogrenci {
+    String ad ;
+    int yas;
+
+    Ogrenci(this.ad, this.yas) ;
+
+}
+
+void main () {
+    Ogrenci o1= Ogrenci("ali", 20);
+    Ogrenci o2= Ogrenci("ayşe", 22);
+
+    o1.yas = 21;
+
+    print(o2.yas); //22
+    
+}
+(ad ve yas-> instance variable
+Her nesnenin kendi yaşı vardır
+o1.yas = 21 ->sadece o1 değişir
+o2.yas->22 olarak kalır 
+
+
+
+
 
 
 
