@@ -5,7 +5,7 @@ THİS
 *Paarametre ile sınıf değişkeni "aynı isimliyse zorunludur" 
 *this "statik alanlarda KULLANILMAZ" 
 
-Örnek: asdas das
+Örnek: asdas das asd
 this.ad = ad;
  
  STATİK 
