@@ -342,12 +342,6 @@ Not:Bir programda bir fonksiyon daire alanını hesaplar, diğer fonksiyon ise �
 
 
 
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 075f1fc (ilk yukleme)
 DART-LİSTELER(ARRAY)
 1-Sabit uzunluklu Liste(Fixed Length List /Array): Uzunluğu sonradan değiştirilmeyen listedir.Eleman sayısı sabittir.
 Örnek: List<int> sayilar = List.filled(5,0);
@@ -562,14 +556,140 @@ abstarct class Sekil {
  double cevreHesapla();
  }
 
-<<<<<<< HEAD
-_ varsa -> private 
+ varsa -> private 
 get varsa -> okuma 
 set varsa ->değiştirme 
 this varsa -> sınıf içi değişken 
 factory varsa -> özel nesne üretimi
-=======
->>>>>>> b479841d9d5feca7a78b3b80da08344d53519613
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 
 
