@@ -564,9 +564,21 @@ factory varsa -> özel nesne üretimi
 
 
 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
+class AgeExcepiton implements Excepiton
+class:sınıf kalıp demek yeni bir kavram tanımlanıyor 
 
+AgeException:yaşla ilgili hata sınıfı,yaşla ilgili özel bir hata tanımı 
+
+implements:uyguluyor/şunu kullanıyor 
+Bu sınıf:Ben bir hata sınıfıyım diyor
+
+Exception:programda olmaması gereken durum 
+
+String mesaj = "Age Exception";
+Hata olursa gösterilecek yazı 
 
 
 
