@@ -582,6 +582,17 @@ Hata olursa gösterilecek yazı
 
 
 
+Compıle Tıme-Run Tıme Özet 
+Compile Time(Derleme zamanı):
+*Kod çalıştırılmadan önce kontrol edilir.
+*Syntax,tip uymu, required kuralları denetlenir.
+
+
+
+
+
+
+
 
 
 

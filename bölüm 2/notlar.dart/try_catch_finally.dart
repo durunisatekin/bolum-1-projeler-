@@ -10,7 +10,7 @@ CATCH:Hata olursa çalışır
 try {
   int x = int.parse("abc");
 } catch (e) {
-  print("hata oluştu: $e");
+  print("hata oluştu: $sbesbe");
 }
 
 FINALLY:Hata olsun olmasın HER ZAMAN çalışır .
