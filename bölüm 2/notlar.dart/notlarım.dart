@@ -413,8 +413,8 @@ Map= key-value şeklinde çalışır.
 
 Tanımlama:
 Map<String, int> notlar= {
-"Ahmet" :70,
-"Mehmet":85,
+"nisa" :70,
+"cenker":85,
 "Duru" :95, 
 };
 
